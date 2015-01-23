@@ -2900,7 +2900,7 @@ YAHOO.ELSA.getPreviousQueries = function(){
 		var myColumnDefs = [
 			{ key:'menu', label:'Action', formatter:formatMenu },
 			{ key:"qid", label:"QID", formatter:YAHOO.widget.DataTable.formatNumber, sortable:true },
-			{ key:"query", label:"Query", sortable:true },
+			{ key:"query", label:"Query", sortable:true, parser:escapeHTML },
 			{ key:"timestamp", label:"Timestamp", editor:"date", formatter:YAHOO.ELSA.Query.formatDate, sortable:true },
 			{ key:"num_results", label:"Results", formatter:YAHOO.widget.DataTable.formatNumber, sortable:true },
 			{ key:"milliseconds", label:"MS Taken", formatter:YAHOO.widget.DataTable.formatNumber, sortable:true }
